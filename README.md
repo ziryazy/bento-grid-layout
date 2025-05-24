@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/ziryazy/bento-grid-layout](https://github.com/ziryazy/bento-grid-layout)
-- Live Site URL: [https://yazy-bento.netlify.app]([https://yazy-bento.netlify.app](https://yazy-bento.vercel.app/)
+- Live Site URL: [https://yazy-bento.netlify.app]([https://yazy-bento.netlify.app](https://yazy-bento.vercel.app/](https://yazy-bento.vercel.app/)
 
 ## My process
 
