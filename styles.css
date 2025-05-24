@@ -1,0 +1,278 @@
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  background-color: var(--White);
+  color: var(--Black);
+  line-height: 1.6;
+  padding: 1rem;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h2, h3 {
+  font-size: 2.18rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+main {
+  margin-top: 6rem;
+}
+
+.bento-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background-color: var(--White);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-1 {
+  background-color: var(--Purple-500);
+  color: var(--White);
+  text-align: center;
+}
+
+.card-2 {
+  background-color: var(--Yellow-100);
+}
+
+.card-3 {
+  position: relative;
+  background-color: var(--Yellow-500);
+  text-align: left;
+  padding-top: 4rem;
+}
+
+.card-4 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  background-color: aliceblue;
+  color: var(--Black);
+}
+
+.card-5 {
+  grid-column: 2 / 5;
+  grid-row: 3 / 4;
+  background-color: aliceblue;
+  color: var(--Black);
+}
+
+.card-6 {
+  background-color: var(--Yellow-500);
+}
+
+.card-7 {
+  background-color: var(--Purple-100);
+}
+
+.card-8 {
+  background-color: var(--Purple-500);
+  color: var(--White);
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 40px;
+  padding-left: 200px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.card-stars {
+  width: 12rem;
+  height: auto;
+}
+
+.card-create {
+  width: 12rem;
+  height: auto;
+}
+
+.card-ai {
+  width: 15rem;
+  height: auto;
+  position: absolute;
+  top: 400px;
+}
+
+.card-3 h2 {
+  position: absolute;
+  top: 150px;
+}
+
+.card-platforms {
+  width: 22rem;
+  height: auto;
+}
+
+.card-audience {
+  position: absolute;
+  top: 200px;
+  width: 14rem;
+  height: auto;
+}
+
+.card-posting {
+  position: absolute;
+  top: 280px;
+  width: 15rem;
+  height: auto;
+}
+
+.card-schedule {
+  position: absolute;
+  top: 180px;
+  width: 26rem;
+  height: auto;
+}
+
+.card-7 p {
+  position: absolute;
+  top: 650px;
+}
+
+.card-followers {
+  width: 225px;
+  height: auto;
+  position: absolute;
+  top: 90px;
+  left: 25px;
+  z-index: 1;
+}
+
+.card-8 h2 {
+  color: var(--White);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 100%;
+  text-align: left;
+  position: inherit;
+  left: 60px;
+  bottom: 50px;
+}
+
+@media (min-width: 1024px) {
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card2 card1 card1 card7"
+      "card3 card4 card6 card7"
+      "card3 card5 card8 card8";
+  }
+
+  .card-1 { grid-area: card1; }
+  .card-2 { grid-area: card2; }
+  .card-3 { grid-area: card3; }
+  .card-4 { grid-area: card4; }
+  .card-5 { grid-area: card5; }
+  .card-6 { grid-area: card6; }
+  .card-7 { grid-area: card7; }
+  .card-8 { grid-area: card8; }
+}
+
+@media (max-width: 1023px) {
+  .card-3, .card-4, .card-5 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart {
+    height: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-8 {
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+  .card-8 h2 {
+    width: 0.25rem;
+    bottom: -10px;
+    left: -80px;
+  }
+
+  .card-followers {
+    position: static;
+    width: 80%;
+  }
+
+  .card-ai,
+  .card-3 h2,
+  .card-audience,
+  .card-posting,
+  .card-schedule,
+  .card-7 p {
+    position: static;
+  }
+
+  .card-schedule,
+  .card-posting,
+  .card-audience {
+    width: 100%;
+  }
+}
